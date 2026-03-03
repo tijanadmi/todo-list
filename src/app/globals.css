@@ -2,26 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Globalno podešavanje tela */
+body {
+  @apply text-gray-800 text-base leading-relaxed bg-white;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Linkovi */
+a {
+  @apply text-pink-600 hover:text-pink-800 transition duration-200;
+}
+
+/* Naslovi */
+h1,
+h2,
+h3,
+h4 {
+  @apply font-bold text-gray-900;
+}
+
+/* Sekcije */
+ {
+   {
+    /* section {
+  @apply py-12 px-4 sm:px-6 lg:px-8;
+} */
+  }
+}
+section {
+  @apply py-12;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Dugmad */
+.btn-primary {
+  @apply inline-block bg-pink-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-pink-700 transition;
+}
+
+@layer components {
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid theme("colors.primary.900");
+    border-right-color: theme("colors.primary.200");
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid theme("colors.primary.200");
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* For data picker */
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+ {
+   {
+    /* .rdp {
+  --rdp-cell-size: 32px !important;
+  --rdp-accent-color: theme("colors.accent.500") !important;
+  --rdp-background-color: theme("colors.accent.600") !important;
+  margin: 0 !important;
+} */
   }
 }
