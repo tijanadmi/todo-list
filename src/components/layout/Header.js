@@ -1,4 +1,6 @@
 // components/layout/Header.js
+"use client";
+
 import LogoutButton from "./LogoutButton";
 
 import MobileSidebar from "./MobileSidebar";
